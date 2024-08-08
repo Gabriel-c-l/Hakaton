@@ -52,7 +52,7 @@ body {
 
 /* Estilo do botão de reset */
 .reset-button {
-    margin-top: 10px; /* Reduzido para aproximar do jogo */
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
     color: #ffffff;
@@ -64,7 +64,7 @@ body {
 
 /* Botão de voltar */
 .back-button {
-    margin-top: 10px; /* Reduzido para aproximar do jogo */
+    margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
     color: #ffffff;
@@ -74,32 +74,26 @@ body {
     cursor: pointer;
 }
 
-
 /* Estilo do tabuleiro */
 .game-board {
     display: grid;
-    grid-template-columns: repeat(4, 60px); /* Ajuste o tamanho dos quadrados */
-    grid-template-rows: repeat(8, 60px); /* Ajuste o tamanho dos quadrados */
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
     grid-gap: 5px;
     justify-content: center;
     margin: 0 auto;
-    height: 20vw;
+    height: 20vw; 
 }
-
 /* Estilo das cartas */
 .card {
-    width: 60px; /* Ajuste o tamanho dos quadrados */
-    height: 60px; /* Ajuste o tamanho dos quadrados */
+    width: 80px;
+    height: 80px;
     background-color: #ffffff;
     border: 2px solid #007bff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px; /* Diminua o tamanho da fonte */
-    font-weight: bold;
-    color: #003366;
+    background-size: cover;
+    background-position: center;
     cursor: pointer;
     transition: background-color 0.2s;
 }
@@ -114,40 +108,5 @@ body {
 .card.matched {
     background-color: #76c788;
     border-color: #1b5e0d;
-    color: #ffffff;
     cursor: default;
-}
-
-/* Estilo do botão de reset */
-.reset-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-/* Efeito de hover no botão de reset */
-.reset-button:hover {
-    background-color: #0056b3;
-}
-
-/* Botão de voltar */
-.back-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #6c757d;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-/* Efeito de hover no botão de voltar */
-.back-button:hover {
-    background-color: #5a6268;
 }

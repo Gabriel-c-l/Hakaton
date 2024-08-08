@@ -1,27 +1,34 @@
 const gameBoard = document.getElementById('game-board');
 const resetButton = document.getElementById('reset-button');
-const numPairs = 8;
-const words = ['arroz', 'feijão', 'pizza', 'lasanha', 'sushi', 'macarrão', 'milho', 'salada '];
+const imagePaths = [
+    './imgHistoria/guerraFria.png',
+    './imgHistoria/guerraFriaR.png',
+    './imgHistoria/RevoluçãoC.png',
+    './imgHistoria/RevoluçãoCR.png',
+    './imgHistoria/RevoluçãoR.png',
+    './imgHistoria/RevoluçãoRR.png',
+    './imgHistoria/Cavalo.png',
+    './imgHistoria/CavaloR.png',
+];
 let cards = [];
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
 
 function initializeGame() {
- 
     gameBoard.innerHTML = '';
     cards = [];
 
     let values = [];
-    for (const word of words) {
-        values.push(word, word.split('').reverse().join(''));
+    for (const image of imagePaths) {
+        values.push(image, image);
     }
     values = values.sort(() => Math.random() - 0.5);
 
-    for (let i = 0; i < numPairs * 2; i++) {
+    for (let i = 0; i < values.length; i++) {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.dataset.value = values[i];
+        card.dataset.image = values[i];
         card.addEventListener('click', flipCard);
         gameBoard.appendChild(card);
         cards.push(card);
@@ -32,7 +39,7 @@ function flipCard() {
     if (lockBoard || this === firstCard || this.classList.contains('flipped')) return;
 
     this.classList.add('flipped');
-    this.textContent = this.dataset.value;
+    this.style.backgroundImage = `url(${this.dataset.image})`;
 
     if (!firstCard) {
         firstCard = this;
@@ -44,8 +51,13 @@ function flipCard() {
 }
 
 function checkForMatch() {
-    if (firstCard.dataset.value === secondCard.dataset.value.split('').reverse().join('') ||
-        secondCard.dataset.value === firstCard.dataset.value.split('').reverse().join('')) {
+    const firstCardImage = firstCard.dataset.image;
+    const secondCardImage = secondCard.dataset.image;
+
+    // Remove sufix "R" for comparison
+    const removeSuffix = image => image.replace(/R\.png$/, '.png');
+
+    if (removeSuffix(firstCardImage) === removeSuffix(secondCardImage)) {
         firstCard.classList.add('matched');
         secondCard.classList.add('matched');
         resetBoard();
@@ -54,8 +66,8 @@ function checkForMatch() {
         setTimeout(() => {
             firstCard.classList.remove('flipped');
             secondCard.classList.remove('flipped');
-            firstCard.textContent = '';
-            secondCard.textContent = '';
+            firstCard.style.backgroundImage = '';
+            secondCard.style.backgroundImage = '';
             resetBoard();
         }, 1000);
     }
