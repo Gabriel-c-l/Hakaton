@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>     
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<div class="login-container">
-    <h1 class="login-container-titulo">Login</h1>
-    <form class="formContainer">
-        <label class="nomeLabel" for="username">Nome</label>
-        <input class="nomeInput" type="text" name="username" placeholder="Escreva seu nome aqui" required>
+    <main class="principal">
+        <div class="login-container">
+            <h1 class="login-container-titulo">Login</h1>
+            <form class="formContainer">
+                <label class="nomeLabel" for="username">Nome</label>
+                <input class="nomeInput" type="text" name="username" placeholder="Escreva seu nome aqui" required>
 
-        <label class="senhaLabel" for="password">Senha</label>
-        <input class="senhaPassword" type="password" name="password" placeholder="Escreva sua senha aqui" required>
+                <label class="senhaLabel" for="password">Senha</label>
+                <input class="senhaPassword" type="password" name="password" placeholder="Escreva sua senha aqui" required>
 
-        <button class="formButton" type="submit">Login</button>
-    </form>
-    <button class="google-login">Logar pelo Google</button>
-    <button class="back-button" onclick="window.history.back()">Voltar</button>
-</div>
-
+                <button class="formButton" type="submit">Login</button>
+                <p>ou</p>
+                <button class="google-login"><img src="../../img/Google.png" alt="" class="googleImg">Logar pelo Google</button>
+            </form>
+            <button class="back-button" onclick="window.history.back()">Voltar</button>
+        </div>
+    </main>
 </body>
 </html>
-

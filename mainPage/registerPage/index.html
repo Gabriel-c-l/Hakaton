@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>     
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-<div class="register-container">
-    <h1 class="register-container-titulo">Register</h1>
-    <form action="/register" method="post">
-        <label class="nomeLabel" for="username">Nome</label>
-        <input class="nomeInput" type="text" name="username" placeholder="Escreva seu nome aqui" required>
+    <main class="principal">
+        <div class="register-container">
+            <h1 class="register-container-titulo">Register</h1>
+            <form class="formContainer" action="/register" method="post">
+                <label class="nomeLabel" for="username">Nome</label>
+                <input class="nomeInput" type="text" name="username" placeholder="Escreva seu nome aqui" required>
 
-        <label class="senhaLabel" for="password">Senha</label>
-        <input class="senhaPassword" type="password" name="password" placeholder="Escreva sua senha aqui" required>
+                <label class="senhaLabel" for="password">Senha</label>
+                <input class="senhaPassword" type="password" name="password" placeholder="Escreva sua senha aqui" required>
 
-        <label class="confmSenhaLabel" for="username">Confirmar senha</label>
-        <input class="confmSenhaInput"type="password" name="password" placeholder="Escreva sua senha novamente" required>
+                <label class="confmSenhaLabel" for="confirmPassword">Confirmar senha</label>
+                <input class="confmSenhaInput" type="password" name="confirmPassword" placeholder="Escreva sua senha novamente" required>
 
-        <label class="emailLabel" for="username">Email</label>
-        <input class="emailLabel" type="email" name="email" placeholder="Escreva seu Email aqui" required>
-        <button class="formButton" type="submit">register</button>
-    </form>
-    <p>ou</p>
-    <button class="google-login">Logar pelo Google</button>
-    <a href="termos.html" target="_blank">termos e condições</a>
-    <div class="terms-container">
-        <input type="checkbox" id="terms" name="terms" required>
-        <label for="terms">Eu li e aceito</label>
-    </div>
-    <button class="back-button" onclick="window.history.back()">Voltar</button>
-</div>
+                <label class="emailLabel" for="email">Email</label>
+                <input class="emailInput" type="email" name="email" placeholder="Escreva seu Email aqui" required>
 
+                <a href="termos.html" target="_blank" class="terms-link">Termos e condições</a>
+                <div class="terms-container">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Eu li e aceito</label>
+                </div>
+                
+                <button class="formButton" type="submit">Register</button>
+
+                <p>ou</p>
+
+                <button class="google-login"><img src="../../img/Google.png" alt="" class="googleImg">Logar pelo Google</button>
+            </form>
+            <button class="back-button" onclick="window.history.back()">Voltar</button>
+        </div>
+    </main>
 </body>
 </html>

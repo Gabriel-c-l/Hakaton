@@ -1,22 +1,147 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow: hidden;  
+    min-height: 100vh;
+}
+
 /* Header */
-.containerTitulo {}
-.Titulo {}
+.containerTitulo {
+    background: linear-gradient(180deg, rgb(4, 58, 138), rgb(86, 153, 252));
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Titulo {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
 
 /* Main content */
-.principal {}
-.nomeContainer {}
-.nomeUsuario {}
+.principal {
+    flex: 1; /* Garante que o conteúdo principal ocupe todo o espaço restante */
+}
 
-.botoesContainer {}
-.botoesJogarContainer {}
+.nomeContainer {
+    margin: 25px 0 35px 20px;
+}
 
-.botoesNavContainer {}
-.botaoUsuario {}
-.botaoConfig {}
-.imgEngrenagem {}
+.nomeUsuario {
+    font-size: 2rem;
+    color: #333;
+}
+
+.botoesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+    gap: 50px;
+}
+
+.botoesJogarContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.botaoJogar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botaoJogar:hover {
+    background-color: #0056b3;
+}
+
+.playImg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.botoesNavContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.botaoUsuario, .botaoConfig {
+    padding: 10px 20px;
+    background-color: #359ebb;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    text-align: center;
+}
+
+.botaoUsuario:hover, .botaoConfig:hover {
+    background-color: #043cb6;
+}
+
+.imgEngrenagem {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
 
 /* Footer */
-.info {}
-.infoContainer {}
-.infoTitulo {}
-.infoLink {}
+.info {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infoContainer {
+    width: 100%; /* Ajuste a largura para 100% */
+    max-width: 1200px; /* Limite máximo da largura */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.infoTitulo {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.infoLink {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.infoLink:hover {
+    text-decoration: underline;
+}

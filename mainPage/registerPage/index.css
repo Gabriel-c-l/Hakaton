@@ -1,29 +1,145 @@
-/* Container principal */
-.register-container {}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
-/* Título do formulário */
-.register-container-titulo {}
+/* Header */
+.containerTitulo {
+    background: linear-gradient(180deg, rgb(4, 58, 138), rgb(86, 153, 252));
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-/* Labels e inputs do formulário */
-.nomeLabel {}
-.nomeInput {}
+.Titulo {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
 
-.senhaLabel {}
-.senhaPassword {}
+/* Main content */
+.principal {
+    flex: 1; /* Garante que o conteúdo principal ocupe todo o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
-.confmSenhaLabel {}
-.confmSenhaInput {}
+.register-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Limite máximo da largura do formulário */
+    text-align: center;
+}
 
-.emailLabel {}
-.emailInput {}
+.register-container-titulo {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
 
-/* Botões do formulário */
-.formButton {}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-.google-login {}
+.nomeLabel, .senhaLabel, .confmSenhaLabel, .emailLabel {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+}
 
-/* Termos e condições */
-.terms-container {}
+.nomeInput, .senhaPassword, .confmSenhaInput, .emailInput {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 
-/* Botão de voltar */
-.back-button {}
+.formButton {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formButton:hover {
+    background-color: #0056b3;
+}
+
+.google-login {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 45px;
+}
+
+.google-login:hover {
+    background-color: #357ae8;
+}
+
+.googleImg {
+    max-width: 40px;
+}
+
+.terms-container {
+    margin-top: 15px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-link {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+.back-button {
+    padding: 10px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}

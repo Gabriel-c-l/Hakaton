@@ -1,23 +1,107 @@
-/* Container principal */
-.login-container {}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
-/* Título do formulário */
-.login-container-titulo{}
+/* Main content */
+.principal {
+    flex: 1; /* Garante que o conteúdo principal ocupe todo o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
-/* Container do formulário */
-.formContainer {}
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Limite máximo da largura do formulário */
+    text-align: center;
+}
 
-/* Labels e inputs do formulário */
-.nomeLabel {}
-.nomeInput {}
+.login-container-titulo {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
 
-.senhaLabel {}
-.senhaPassword {}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-/* Botões do formulário */
-.formButton {}
+.nomeLabel, .senhaLabel {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+}
 
-.google-login {}
+.nomeInput, .senhaPassword {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 
-/* Botão de voltar */
-.back-button {}
+.formButton {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formButton:hover {
+    background-color: #0056b3;
+}
+
+.google-login {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 45px;
+}
+
+.google-login:hover {
+    background-color: #357ae8;
+}
+
+.googleImg{
+    max-width: 40px;
+}
+
+.back-button {
+    padding: 10px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
