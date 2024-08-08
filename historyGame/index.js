@@ -1,21 +1,20 @@
 const gameBoard = document.getElementById('game-board');
 const resetButton = document.getElementById('reset-button');
-const numPairs = 8; // Número total de pares de cartas
-const words = ['JavaScript', 'Python', 'Ruby', 'Java', 'Swift', 'Kotlin', 'PHP', 'HTML'];
+const numPairs = 8;
+const words = ['arroz', 'feijão', 'pizza', 'lasanha', 'sushi', 'macarrão', 'milho', 'salada '];
 let cards = [];
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
 
 function initializeGame() {
-    // Limpa o tabuleiro antes de iniciar um novo jogo
+ 
     gameBoard.innerHTML = '';
     cards = [];
-    
-    // Cria um array de palavras e suas versões invertidas e embaralha
+
     let values = [];
     for (const word of words) {
-        values.push(word, word.split('').reverse().join('')); // Adiciona a palavra e sua versão invertida
+        values.push(word, word.split('').reverse().join(''));
     }
     values = values.sort(() => Math.random() - 0.5);
 
@@ -67,8 +66,6 @@ function resetBoard() {
     lockBoard = false;
 }
 
-// Adiciona um listener para o botão de reset
 resetButton.addEventListener('click', initializeGame);
 
-// Inicializa o jogo ao carregar a página
 initializeGame();

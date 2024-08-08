@@ -7,9 +7,22 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Jogo da Memória</h1>
-    <div id="game-board" class="game-board"></div>
-    <button id="reset-button" class="reset-button">Reiniciar Jogo</button>
+    <div class="header">
+        <div>
+            <img src="../img/Happy-Person-PNG-Picture.png" alt="User" class="user-image">
+            <p class="user-name">João</p>
+        </div>
+        <div>
+            <button id="settings-button" class="settings-button">
+                <img src="../img/engrenagem.png" alt="Settings" class="settings-img">
+            </button>
+        </div>
+    </div>
+    <div class="game-container">
+        <div id="game-board" class="game-board"></div>
+        <button id="reset-button" class="reset-button">Reiniciar Jogo</button>
+        <button class="back-button" onclick="window.history.back()">Voltar</button>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

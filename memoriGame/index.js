@@ -1,7 +1,7 @@
 const gameBoard = document.getElementById('game-board');
 const resetButton = document.getElementById('reset-button');
 const numPairs = 8;
-const words = ['JavaScript', 'Python', 'Ruby', 'Java', 'Swift', 'Kotlin', 'PHP', 'HTML'];
+const words = ['arroz', 'feijão', 'pizza', 'lasanha', 'sushi', 'macarrão', 'milho', 'salada '];
 let cards = [];
 let firstCard = null;
 let secondCard = null;

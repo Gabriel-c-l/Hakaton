@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #e6f0ff;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,8 +16,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: linear-gradient(180deg, rgb(4, 58, 138), rgb(86, 153, 252));
-    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .user-image {
@@ -28,7 +26,7 @@ body {
 
 .user-name {
     margin-top: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1rem;
 }
 
@@ -45,13 +43,37 @@ body {
 
 /* Container do jogo */
 .game-container {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    align-items: self-end;
+    margin-right: 20px;
+    min-height: 0;
 }
+
+/* Estilo do botão de reset */
+.reset-button {
+    margin-top: 10px; /* Reduzido para aproximar do jogo */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Botão de voltar */
+.back-button {
+    margin-top: 10px; /* Reduzido para aproximar do jogo */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 
 /* Estilo do tabuleiro */
 .game-board {
@@ -61,6 +83,7 @@ body {
     grid-gap: 5px;
     justify-content: center;
     margin: 0 auto;
+    height: 20vw;
 }
 
 /* Estilo das cartas */
@@ -74,7 +97,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px; /* Diminua o tamanho da fonte */
+    font-size: 12px; /* Diminua o tamanho da fonte */
     font-weight: bold;
     color: #003366;
     cursor: pointer;
