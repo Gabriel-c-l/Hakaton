@@ -1,0 +1,23 @@
+/* Container principal */
+.login-container {}
+
+/* Título do formulário */
+.login-container-titulo{}
+
+/* Container do formulário */
+.formContainer {}
+
+/* Labels e inputs do formulário */
+.nomeLabel {}
+.nomeInput {}
+
+.senhaLabel {}
+.senhaPassword {}
+
+/* Botões do formulário */
+.formButton {}
+
+.google-login {}
+
+/* Botão de voltar */
+.back-button {}

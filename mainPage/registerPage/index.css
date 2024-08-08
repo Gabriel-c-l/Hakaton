@@ -1,0 +1,29 @@
+/* Container principal */
+.register-container {}
+
+/* Título do formulário */
+.register-container-titulo {}
+
+/* Labels e inputs do formulário */
+.nomeLabel {}
+.nomeInput {}
+
+.senhaLabel {}
+.senhaPassword {}
+
+.confmSenhaLabel {}
+.confmSenhaInput {}
+
+.emailLabel {}
+.emailInput {}
+
+/* Botões do formulário */
+.formButton {}
+
+.google-login {}
+
+/* Termos e condições */
+.terms-container {}
+
+/* Botão de voltar */
+.back-button {}
